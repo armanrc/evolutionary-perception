@@ -3,6 +3,7 @@ patches-own[food water]
 
 
 
+
 breed[truth-strategy truth-strategies]
 breed[simple-strategy simple-strategies]
 
