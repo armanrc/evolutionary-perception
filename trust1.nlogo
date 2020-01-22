@@ -4,6 +4,8 @@ breed[defector defectors]
 breed[tit-for-tat tit-for-tats]
 
 
+
+
 to setup
   clear-all
   set-default-shape turtles "person"
@@ -23,7 +25,7 @@ to go
     create-link-with neighbor
      let f [breed] of neighbor
      let ne [energy] of neighbor
-        
+
      if d = defector and f = cooperator [set energy energy + 15 set ne ne - 5]
      if d = cooperator and f = cooperator[set energy energy + 10 set ne ne + 10]
      if d = cooperator and f = defector[set energy energy - 5 set ne ne + 15]
@@ -37,8 +39,8 @@ to go
   ]
   ask turtles[
       if energy <= 0[die]
-      set selected? 0 
-      
+      set selected? 0
+
   ]
   clear-links
   tick
@@ -47,10 +49,10 @@ end
 GRAPHICS-WINDOW
 210
 10
-649
-470
-16
-16
+647
+448
+-1
+-1
 13.0
 1
 10
@@ -77,7 +79,7 @@ BUTTON
 69
 46
 NIL
-setup\n
+setup
 NIL
 1
 T
@@ -114,7 +116,7 @@ cooperator-num
 cooperator-num
 0
 10000
-828
+828.0
 1
 1
 NIL
@@ -129,7 +131,7 @@ defector-num
 defector-num
 0
 10000
-1720
+1720.0
 1
 1
 NIL
@@ -144,7 +146,7 @@ tit-for-tat-num
 tit-for-tat-num
 0
 10000
-191
+191.0
 1
 1
 NIL
@@ -159,7 +161,7 @@ energy-quant
 energy-quant
 0
 100
-25
+25.0
 1
 1
 NIL
@@ -550,9 +552,8 @@ false
 0
 Polygon -7500403 true true 270 75 225 30 30 225 75 270
 Polygon -7500403 true true 30 75 75 30 270 225 225 270
-
 @#$#@#$#@
-NetLogo 5.1.0
+NetLogo 6.0.2
 @#$#@#$#@
 @#$#@#$#@
 @#$#@#$#@
@@ -568,7 +569,6 @@ true
 0
 Line -7500403 true 150 150 90 180
 Line -7500403 true 150 150 210 180
-
 @#$#@#$#@
 0
 @#$#@#$#@
